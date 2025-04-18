@@ -1,0 +1,204 @@
+body {
+    background-color: rgb(21, 136, 231);
+}
+
+/* القائمة الجانبية */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: #333;
+    position: fixed;
+    left: -250px; 
+    top: 0;
+    transition: left 0.3s;
+    padding-top: 20px;
+}
+
+/* عند استهداف القائمة تظهر */
+.sidebar:target {
+    left: 0;
+}
+
+/* تنسيق الروابط */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sidebar a:hover {
+    background: #444;
+}
+
+/* زر فتح القائمة */
+.menu-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 30px;
+    background: #04f07a;
+    color: rgb(12, 12, 12);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* زر إغلاق القائمة */
+.close-btn {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.close-btn:hover {
+    color: red;
+}
+body::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 155, 6, 0.685);
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(10%);
+    opacity: 0.9;
+    margin: -550px 50px 50px 190px;
+}
+body::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 155, 6, 0.685);
+    opacity: 0.9;
+    clip-path: circle(10%);
+    position: absolute;
+    z-index: -1;
+    margin: -100px 50px 50px -150px;
+}
+/* ضبط الحاوية في منتصف الشاشة */
+.container {
+    width: 350px;
+    height: 200px;
+    perspective: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* البطاقة */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* عند تمرير الفأرة تدور البطاقة */
+.container:hover .card {
+    transform: rotateY(180deg);
+}
+
+/* الجهتان الأمامية والخلفية */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+/* الجهة الأمامية */
+.card-front {
+    background: darkred;
+    color: white;
+}
+
+/* الجهة الخلفية */
+.card-back {
+    background: linear-gradient(45deg, #424242, #616161);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* شريط أسود في الخلف */
+.black-bar {
+    width: 100%;
+    height: 40px;
+    background: black;
+    margin-top: 10px;
+}
+
+/* مربع الـ CVV */
+.cvv-box {
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.cvv-box span {
+    font-weight: bold;
+    font-size: 18px;
+}
+.chip{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    margin: -80px 50px 50px 330px;
+    
+}
+p{
+    position: absolute;
+    margin: -80px 50px 50px -80px;
+}
+.logo{
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    margin: -115px 20px 20px -270px;
+}
+.number{
+    position: absolute;
+    margin: 110px 50px 50px -125px;
+}
+.name{
+    position: absolute;
+    margin: 240px 100px 100px -100px;
+}
+.valid{
+    position: absolute;
+    margin: 145px 50px 50px 330px;
+    font-size: x-small;
+    
+}
+.date{
+    position: absolute;
+    margin: 190px 50px 50px 330px;
+
+}
+p3{
+    position: absolute;
+    margin: 50px 50px 50px -190px;
+}
+.info{
+    position: absolute;
+    margin: 16px 100px 100px 100px;
+    white-space: nowrap;
+}
