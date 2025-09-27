@@ -3,12 +3,12 @@ function appendToDisplay(input) {
     display.value += input;
 }
 function clearDisplay() {
-    display.value = "";  // مسح محتوى شاشة العرض
+    display.value = "";  
 }
 function calculate() {
     try {
-        display.value = eval(display.value); // حساب المعادلة باستخدام eval
+        display.value = eval(display.value); 
     } catch (e) {
-        display.value = "Error";  // في حالة حدوث خطأ في المعادلة
+        display.value = "Error";  
     }
 }
