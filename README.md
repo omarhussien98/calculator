@@ -29,9 +29,9 @@ To run this project locally:
 
 1. Open **Visual Studio Code**  
 2. Create or open these files:  
-   - `index.html`  
-   - `style.css`  
-   - `script.js`  
+   - `Calculator.html`  
+   - `Calculator.css`  
+   - `Calculator.js`  
 3. Copy the project code into these files  
 4. Use **Live Server** (a VS Code extension) or open `index.html` in your browser  
 5. Enjoy using the calculator  
